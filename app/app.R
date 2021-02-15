@@ -87,7 +87,7 @@ ui <- fluidPage(
       leafletOutput("map", width = "100%", height = 400),
       sliderInput(
         "selDate", 
-        "",
+        "Date",
         min        = date_beg,
         max        = date_end,
         value      = date_beg, 
@@ -170,7 +170,13 @@ server <- function(input, output, session) {
         addControl(
           position = "bottomright",
           layerId  = "date",
-          html     = date_beg)
+          html     = date_beg) %>% 
+        addMiniMap(
+          position = "bottomleft",
+          width    = 100,
+          height   = 100,
+          zoomLevelOffset = -7,
+          toggleDisplay = T)
     })
     m
   })
