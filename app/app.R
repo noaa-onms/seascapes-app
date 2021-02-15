@@ -15,6 +15,7 @@ shelf(
   readr,
   shiny,
   stringr)
+# remotes::install_github("marinebon/seascapeR")
 # devtools::load_all("~/github/seascapeR")
 # devtools::install_local("~/github/seascapeR", force = T)
 
