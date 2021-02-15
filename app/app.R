@@ -300,23 +300,28 @@ server <- function(input, output, session) {
           noHide = T))
   })
   
+  # plot ----
   output$plot <- renderDygraph({
     
-    g <- plot_ss_ts(values$tbl) %>%
-      dyEvent(
-        x        = values$date,
-        label    = values$date,
-        labelLoc = "bottom")
-    
-    if (isTRUE(input$dark_mode))
-      g <- g %>% 
+    g <- plot_ss_ts(values$tbl)
+
+    if (isTRUE(input$dark_mode)){
+      g <- g  %>%
+        dyEvent(
+          x        = values$date,
+          label    = values$date,
+          labelLoc = "bottom",
+          color    = "white") %>% 
         dyCSS("www/styles.css")
+    } else {
+      g <- g  %>%
+        dyEvent(
+          x        = values$date,
+          label    = values$date,
+          labelLoc = "bottom")
+    }
     
     g
-  })
-  
-  output$clicked <- renderText({
-    strftime(req(input$plot_click$x), "%Y-%m-%d")
   })
   
   observe({

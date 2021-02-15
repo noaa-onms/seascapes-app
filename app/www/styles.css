@@ -1,19 +1,11 @@
-.glyphicon {
+/* increase play and pause button size */
+.glyphicon-play, .glyphicon-pause {
     font-size: 35px;
 }
 
-/*.dygraph-title {
-  color: navy;
-  font-weight: bold;
-}
-.dygraph-axis-label {
-  font-size: 11px;
-}
-*/
-
+/* dygraph in dark mode */
 .dygraph-axis-label {
   color: #B9BEC2;
-  /*font-weight: bold; */
 }
 
 .dygraph-legend {
