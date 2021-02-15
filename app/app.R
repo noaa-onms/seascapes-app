@@ -3,6 +3,7 @@ if (!require(librarian)){
   library(librarian)
 }
 shelf(
+  bslib,
   dygraphs,
   glue,
   fs,
@@ -73,9 +74,29 @@ ply_1       <- get_url_ply(sanctuary_1, dir_ply = dir_ply)
 tbl_1       <- get_tbl(sanctuary_1)
 pal_1       <- get_pal(tbl_1)
 
+light <- bs_theme(
+  version = 4,
+  bootswatch = "slate",
+  bg = "white",
+  fg = "black")
+dark <- bs_theme(
+  version = 4,
+  bootswatch = "slate",
+  bg = "#272B30",
+  fg = "#B9BEC2")
+
 ui <- fluidPage(
+  theme = light,
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
+  div(
+    class = "custom-control custom-switch", 
+    tags$input(
+      id = "dark_mode", type = "checkbox", class = "custom-control-input",
+      onclick = HTML("Shiny.setInputValue('dark_mode', document.getElementById('dark_mode').value);")),
+    tags$label(
+      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),
+  
   titlePanel("Sanctuary Seascapes"),
   fluidRow(
     column(
@@ -109,6 +130,11 @@ server <- function(input, output, session) {
     ply       = ply_1,
     pal       = pal_1)
   
+  observe({
+    session$setCurrentTheme(
+      if (isTRUE(input$dark_mode)) dark else light
+    )
+  })
   observeEvent(
     input$selDate, {
       req(input$selSanctuary)
@@ -147,7 +173,10 @@ server <- function(input, output, session) {
     
     suppressWarnings({
       m <- leaflet() %>%
-        addProviderTiles(providers$Esri.OceanBasemap) %>%
+        addProviderTiles(
+          providers$Esri.OceanBasemap,
+          options = providerTileOptions(
+            opacity = 0.6)) %>%
         addRasterImage(
           grd,
           project = T, method = "ngb",
