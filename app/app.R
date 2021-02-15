@@ -90,13 +90,12 @@ ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
   div(
-    class = "custom-control custom-switch", 
+    class = "custom-control custom-switch float-right", 
     tags$input(
       id = "dark_mode", type = "checkbox", class = "custom-control-input",
       onclick = HTML("Shiny.setInputValue('dark_mode', document.getElementById('dark_mode').value);")),
     tags$label(
-      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),
-  
+      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),  
   titlePanel("Sanctuary Seascapes"),
   fluidRow(
     column(
