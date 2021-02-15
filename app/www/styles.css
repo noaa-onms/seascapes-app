@@ -1,3 +1,21 @@
 .glyphicon {
     font-size: 35px;
 }
+
+/*.dygraph-title {
+  color: navy;
+  font-weight: bold;
+}
+.dygraph-axis-label {
+  font-size: 11px;
+}
+*/
+
+.dygraph-axis-label {
+  color: #B9BEC2;
+  /*font-weight: bold; */
+}
+
+.dygraph-legend {
+  background-color: #272B30 !important;
+}

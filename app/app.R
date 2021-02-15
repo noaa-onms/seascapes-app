@@ -16,6 +16,7 @@ shelf(
   shiny,
   stringr)
 # devtools::load_all("~/github/seascapeR")
+# devtools::install_local("~/github/seascapeR", force = T)
 
 # TODO:
 # - download grids (*.tif), time series (*.csv)
@@ -85,18 +86,32 @@ dark <- bs_theme(
   bg = "#272B30",
   fg = "#B9BEC2")
 
+# ui ----
 ui <- fluidPage(
-  theme = light,
+  theme = dark,
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
   div(
     class = "custom-control custom-switch float-right", 
     tags$input(
-      id = "dark_mode", type = "checkbox", class = "custom-control-input",
+      id = "dark_mode", type = "checkbox", checked = T, class = "custom-control-input",
       onclick = HTML("Shiny.setInputValue('dark_mode', document.getElementById('dark_mode').value);")),
     tags$label(
-      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),  
-  titlePanel("Sanctuary Seascapes"),
+      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),
+  div(
+    class = "float-right", 
+    # span(
+    #   style="font-size:20px;", 
+    actionLink("lnkAbout", HTML("About&nbsp;&nbsp;"))),
+      #HTML("About&nbsp;&nbsp;"))),
+  titlePanel(
+    tagList(
+      HTML("<h2>
+        <img src='logo.svg' align='left', height=50/> 
+        &nbsp;Seascapes for Sanctuaries&nbsp;&nbsp;
+        <span style='font-size:10px;'><a href='https://marinebon.org'>MarineBON.org</a></small>
+        </h2>")),
+    windowTitle = "Sanctuary Seascapes"),
   fluidRow(
     column(
       6,
@@ -286,12 +301,17 @@ server <- function(input, output, session) {
   
   output$plot <- renderDygraph({
     
-    plot_ss_ts(values$tbl) %>% 
+    g <- plot_ss_ts(values$tbl) %>%
       dyEvent(
-        x        = values$date, 
-        label    = values$date, 
+        x        = values$date,
+        label    = values$date,
         labelLoc = "bottom")
     
+    if (isTRUE(input$dark_mode))
+      g <- g %>% 
+        dyCSS("www/styles.css")
+    
+    g
   })
   
   output$clicked <- renderText({
@@ -307,6 +327,15 @@ server <- function(input, output, session) {
       value = as.Date(date_click))
   })
   
+  observeEvent(input$lnkAbout, {
+    showModal(modalDialog(
+      tags$head(
+        tags$script(src="https://kit.fontawesome.com/fe79a3e7cf.js", crossorigin="anonymous")),
+      h5(HTML("About <img src='logo.svg' align='right' height=100>")),
+      readLines("about.md") %>% markdown(), 
+      easyClose = TRUE) # , footer = NULL
+    )
+  })
 }
 
 shinyApp(ui = ui, server = server)
