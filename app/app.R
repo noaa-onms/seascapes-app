@@ -26,10 +26,6 @@ sanctuaries           <- setNames(
   names(sanctuaries), sanctuaries)
 
 dir_data <- here("data")
-#dir_data <- "~/github/seascape_app/data"
-
-message(glue("dir_data: {dir_data}"))
-
 dir_ply  <- glue("{dir_data}/ply")
 dir_grd  <- glue("{dir_data}/grd")
 
@@ -116,11 +112,14 @@ server <- function(input, output, session) {
       req(input$selSanctuary)
       
       values$date <- as.Date(glue("{year(input$selDate)}-{month(input$selDate)}-15"))
+      
       values$grd  <- get_grd(values$sanctuary, values$date)
     })
   
   observeEvent(
     input$selSanctuary, {
+      req(input$selDate)
+      
       sanctuary <- input$selSanctuary
       tbl       <- get_tbl(sanctuary)
       
@@ -128,12 +127,14 @@ server <- function(input, output, session) {
       values$tbl       <- tbl
       values$ply       <- get_url_ply(sanctuary, dir_ply = dir_ply)
       values$pal       <- get_pal(tbl)
+      
+      values$grd       <- get_grd(values$sanctuary, values$date)
     })
   
   output$map <- renderLeaflet({
     # vary this map with sanctuary only, so using date_beg
     #   use proxy for varying date so doesn't zoom out
-    sanctuary <- values$sanctuary
+    sanctuary <- input$selSanctuary
     
     # sanctuary = "nmsas"; date = as.Date("2019-01-15")
     ply <- get_url_ply(sanctuary, dir_ply = dir_ply)
@@ -143,13 +144,14 @@ server <- function(input, output, session) {
     classes <- attr(pal, "classes")
     
     suppressWarnings({
-      leaflet() %>%
+      m <- leaflet() %>%
         addProviderTiles(providers$Esri.OceanBasemap) %>%
         addRasterImage(
           grd,
           project = T, method = "ngb",
           colors  = pal,
           opacity = 0.8,
+          layerId = "grd",
           group = "Class") %>%
         addLegend(
           position = "bottomright",
@@ -168,21 +170,22 @@ server <- function(input, output, session) {
           layerId  = "date",
           html     = date_beg)
     })
+    m
   })
   
   observe({
     proxy <- leafletProxy("map")
-    
+  
     sanctuary <- values$sanctuary
     date      <- values$date
     pal       <- values$pal
-    ply       <- values$ply
     classes   <- attr(pal, "classes")      
     grd       <- values$grd
 
     suppressWarnings({
-      proxy %>%
+      proxy <- proxy %>%
         clearImages() %>% 
+        removeImage("grd") %>% 
         removeMarker("marker") %>% 
         removeControl("date") %>% 
         addRasterImage(
@@ -190,11 +193,13 @@ server <- function(input, output, session) {
           project = T, method = "ngb",
           colors  = pal,
           opacity = 0.8,
+          layerId = "grd",
           group   = "Class") %>% 
         addControl(
           position = "bottomright",
           layerId  = "date",
           html     = date) })
+    proxy
   })
   
   observe({
