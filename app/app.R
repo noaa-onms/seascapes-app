@@ -74,6 +74,8 @@ tbl_1       <- get_tbl(sanctuary_1)
 pal_1       <- get_pal(tbl_1)
 
 ui <- fluidPage(
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
   titlePanel("Sanctuary Seascapes"),
   fluidRow(
     column(
