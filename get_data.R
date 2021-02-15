@@ -24,7 +24,7 @@ sanctuaries = names(nms) %>% setdiff("pmnm")
 ss_datasets = c("global_monthly")
 ss_vars     = c("CLASS")
 date_beg    = "2019-01-01"
-date_end    = "2021-01-01"
+date_end    = strftime(as.POSIXlt(Sys.time(), "UTC"), "%Y-%m-%d")
 
 msg_i <- function(name, itm, vec, show_time = T){
   i_vec <- which(itm == vec)
