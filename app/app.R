@@ -117,7 +117,7 @@ ui <- fluidPage(
     column(
       12,
       div(
-        style = "padding-left: 100px; height: 10px;",
+        style = "padding-left: 100px; height: 0;", # 
         selectInput(
           "selSanctuary",
           "",

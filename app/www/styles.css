@@ -4,15 +4,19 @@
 }
 
 /* reduce selSanctuary size */
-.selectize-dropdown { 
+
+/*.selectize-dropdown { 
   line-height: 10px;
 }
+*/
 
+/*
 .selectize-input {
   min-height: 0;
   padding: 0px;
   padding-bottom: 0 !important;
 }
+*/
 
 .selectize-control {
   margin-bottom: 0 !important;
