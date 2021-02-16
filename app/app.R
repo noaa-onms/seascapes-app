@@ -42,10 +42,20 @@ ts_csv <- dir_ls(dir_grd, regexp = fixed(glue("{ss_dataset}_{ss_var}.csv")), rec
 ts <- read_csv(ts_csv, col_types = cols())
 date_beg  = min(ts$date)
 date_end  = max(ts$date)
+message(glue("date_beg - date_end: {date_beg} - {date_end}"))
 
-get_tbl <- function(sanctuary){
-  ts_csv <- glue::glue(
+get_ts_csv <- function(sanctuary){
+  glue::glue(
     "{dir_grd}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
+}
+
+get_ts_csv_out <- function(sanctuary){
+  glue::glue(
+    "{sanctuary}_{ss_dataset}_{ss_var}.csv")
+}
+
+get_ts <- function(sanctuary){
+  ts_csv <- get_ts_csv(sanctuary)
   read_csv(ts_csv, col_types = cols()) 
 }
 
@@ -62,21 +72,43 @@ get_pal <- function(tbl){
   pal
 }
 
-get_grd <- function(sanctuary, date){
+get_grd_tif <- function(sanctuary, date){
   y <- year(date)
   m <- str_pad(month(date), 2, pad = "0")   
   
-  grd_tif <- glue(
+  glue(
     "{dir_grd}/{sanctuary}/{ss_dataset}/grd_CLASS_{y}.{m}.15.tif")
+}
 
-  grd <- raster::raster(grd_tif)
+get_grd_tif_out <- function(sanctuary, date){
+  y <- year(date)
+  m <- str_pad(month(date), 2, pad = "0")   
+  
+  glue(
+    "{sanctuary}_{ss_dataset}_CLASS_{y}.{m}.15.tif")
+}
+
+get_grds_zip <- function(sanctuary){
+  glue(
+    "{dir_grd}/{sanctuary}/{ss_dataset}.zip")
+}
+
+get_grds_zip_out <- function(sanctuary){
+  glue(
+    "{sanctuary}_{ss_dataset}.zip")
+}
+
+get_grd <- function(sanctuary, date){
+
+  tif <- get_grd_tif(sanctuary, date)
+  grd <- raster::raster(tif)
   names(grd) <- stringr::str_replace(names(grd), "^grd_", "")
   grd
 }
 
 sanctuary_1 <- sanctuaries[[1]]
 ply_1       <- get_url_ply(sanctuary_1, dir_ply = dir_ply)
-tbl_1       <- get_tbl(sanctuary_1)
+tbl_1       <- get_ts(sanctuary_1)
 pal_1       <- get_pal(tbl_1)
 
 light <- bs_theme(
@@ -123,6 +155,13 @@ ui <- fluidPage(
           "",
           sanctuaries)),
       leafletOutput("map", width = "100%", height = 350),
+      fluidRow(
+        column(
+          12,
+          "Download Sanctuary files:", 
+          downloadLink("dlTif", "grid (.tif)"), ", ",
+          downloadLink("dlZip", "all grids (.zip)"),  ", ",
+          downloadLink("dlCsv", "timeseries (.csv)"))),
       sliderInput(
         "selDate", 
         "",
@@ -166,7 +205,7 @@ server <- function(input, output, session) {
       req(input$selDate)
       
       sanctuary <- input$selSanctuary
-      tbl       <- get_tbl(sanctuary)
+      tbl       <- get_ts(sanctuary)
       
       values$sanctuary <- sanctuary
       values$tbl       <- tbl
@@ -183,7 +222,7 @@ server <- function(input, output, session) {
     
     ply <- get_url_ply(sanctuary, dir_ply = dir_ply)
     grd <- get_grd(sanctuary, date_beg)
-    tbl <- get_tbl(sanctuary)
+    tbl <- get_ts(sanctuary)
     pal <- get_pal(tbl)
     classes <- attr(pal, "classes")
     
@@ -344,6 +383,31 @@ server <- function(input, output, session) {
       easyClose = TRUE) # , footer = NULL
     )
   })
+  
+  output$dlTif <- downloadHandler(
+    filename = function() {
+      get_grd_tif_out(values$sanctuary, values$date) },
+    content = function(file) {
+      tif_in <- get_grd_tif(values$sanctuary, values$date)
+      file.copy(tif_in, file) },
+    #contentType = "application/zip"
+    contentType = "image/tiff")
+  
+  output$dlZip <- downloadHandler(
+    filename = function() {
+      get_grds_zip_out(values$sanctuary) },
+    content = function(file) {
+      zip_in <- get_grds_zip(values$sanctuary)
+      file.copy(zip_in, file) },
+    contentType = "application/zip")
+  
+  output$dlCsv <- downloadHandler(
+    filename = function() {
+      get_ts_csv_out(values$sanctuary) },
+    content = function(file) {
+      csv_in <- get_ts_csv(values$sanctuary)
+      file.copy(csv_in, file) },
+    contentType = "text/csv")
 }
 
 shinyApp(ui = ui, server = server)
