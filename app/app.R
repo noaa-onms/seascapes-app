@@ -378,9 +378,10 @@ server <- function(input, output, session) {
     showModal(modalDialog(
       tags$head(
         tags$script(src="https://kit.fontawesome.com/fe79a3e7cf.js", crossorigin="anonymous")),
-      h5(HTML("About <img src='logo.svg' align='right' height=100>")),
+      h3(HTML("About <img src='logo.svg' align='right' height=100>")),
       readLines("about.md") %>% markdown(), 
-      easyClose = TRUE) # , footer = NULL
+      easyClose = TRUE,
+      size = "l") # , footer = NULL
     )
   })
   
