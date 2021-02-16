@@ -14,9 +14,11 @@ shelf(
   raster,
   readr,
   shiny,
-  stringr)
+  stringr,
+  joshuaulrich/xts) # for: plot_ts_ss() -> dygraphs(retainDateWindow = T)
+
 # remotes::install_github("marinebon/seascapeR")
-# devtools::load_all("~/github/seascapeR")
+devtools::load_all("~/github/seascapeR")
 # devtools::install_local("~/github/seascapeR", force = T)
 
 # TODO:
