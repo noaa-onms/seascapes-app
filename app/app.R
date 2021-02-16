@@ -117,7 +117,7 @@ ui <- fluidPage(
     column(
       12,
       div(
-        style = "padding-left: 43px;",
+        style = "padding-left: 100px; height: 10px;",
         selectInput(
           "selSanctuary",
           "",
@@ -211,6 +211,7 @@ server <- function(input, output, session) {
           fillOpacity = 0,
           group = "Sanctuary") %>% 
         addLayersControl(
+          position = "topleft",
           overlayGroups = c("Class", "Sanctuary")) %>% 
         addControl(
           position = "bottomright",
