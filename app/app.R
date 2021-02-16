@@ -14,11 +14,11 @@ shelf(
   raster,
   readr,
   shiny,
-  stringr,
-  joshuaulrich/xts) # for: plot_ts_ss() -> dygraphs(retainDateWindow = T)
+  stringr)
+# Note: joshuaulrich/xts needed over CRAN xts for plot_ts_ss() with dygraphs(retainDateWindow = T) to work
 
 # remotes::install_github("marinebon/seascapeR")
-devtools::load_all("~/github/seascapeR")
+# devtools::load_all("~/github/seascapeR")
 # devtools::install_local("~/github/seascapeR", force = T)
 
 # TODO:
@@ -37,10 +37,16 @@ dir_grd  <- glue("{dir_data}/grd")
 ss_dataset <- "global_monthly" # TODO: + "global_8day"
 ss_var     <- "CLASS"          # TODO: + "P"
 
-date_beg  = as.Date("2019-01-15")
-date_end  = as.Date("2020-11-15")
-
 ss_info <- get_ss_info(ss_dataset)
+# get_ss_dates(ss_info)
+
+# date_beg  = as.Date("2003-01-15")
+# date_end  = as.Date("2020-11-15")
+
+ts_csv <- dir_ls(dir_grd, regexp = fixed(glue("{ss_dataset}_{ss_var}.csv")), recurse = T)[1]
+ts <- read_csv(ts_csv, col_types = cols())
+date_beg  = min(ts$date)
+date_end  = max(ts$date)
 
 get_tbl <- function(sanctuary){
   ts_csv <- glue::glue(
@@ -100,7 +106,7 @@ ui <- fluidPage(
       id = "dark_mode", type = "checkbox", checked = T, class = "custom-control-input",
       onclick = HTML("Shiny.setInputValue('dark_mode', document.getElementById('dark_mode').value);")),
     tags$label(
-      "Dark mode", `for` = "dark_mode", class = "custom-control-label")),
+      "Dark Mode", `for` = "dark_mode", class = "custom-control-label")),
   div(
     class = "float-right", 
     # span(
@@ -117,12 +123,12 @@ ui <- fluidPage(
     windowTitle = "Sanctuary Seascapes"),
   fluidRow(
     column(
-      6,
+      12,
       selectInput(
         "selSanctuary",
         "Sanctuary",
         sanctuaries),
-      leafletOutput("map", width = "100%", height = 400),
+      leafletOutput("map", width = "100%", height = 300),
       sliderInput(
         "selDate", 
         "Date",
@@ -134,8 +140,8 @@ ui <- fluidPage(
         width      = "100%",
         timeFormat = "%Y-%m")),
     column(
-      6,
-      dygraphOutput("plot", width = "100%", height = 550))
+      12,
+      dygraphOutput("plot", width = "100%", height = 400))
   ))
 
 server <- function(input, output, session) {
@@ -313,7 +319,7 @@ server <- function(input, output, session) {
           x        = values$date,
           label    = values$date,
           labelLoc = "bottom",
-          color    = "white") %>% 
+          color    = "white") %>%
         dyCSS("www/styles.css")
     } else {
       g <- g  %>%
@@ -322,7 +328,7 @@ server <- function(input, output, session) {
           label    = values$date,
           labelLoc = "bottom")
     }
-    
+
     g
   })
   

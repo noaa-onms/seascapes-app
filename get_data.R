@@ -8,6 +8,7 @@ shelf(
   here,
   marinebon/seascapeR)
 # devtools::load_all("~/github/seascapeR")
+# remotes::install_github("marinebon/seascapeR")
 
 # paths
 dir_data = here("data")
@@ -18,13 +19,8 @@ sanctuaries = names(nms) %>% setdiff("pmnm")
 # TODO: pmnm Error: 
 #   One or both longitude values (-180, 180) outside data range (-179.975, 179.975)
   
-# ss_datasets = c("global_monthly", "global_8day")
-# ss_vars     = c("CLASS", "P")
-# start simpler
-ss_datasets = c("global_monthly")
-ss_vars     = c("CLASS")
-date_beg    = "2019-01-01"
-date_end    = "2021-01-01"
+ss_datasets = c("global_monthly") # TODO: "global_8day"
+ss_vars     = c("CLASS")          # TODO: "P"
 
 msg_i <- function(name, itm, vec, show_time = T){
   i_vec <- which(itm == vec)
@@ -54,17 +50,16 @@ for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
       message("      get_ss_grds()")
       grds <- get_ss_grds(
         ss_info, ply, 
-        date_beg = date_beg, 
-        date_end = date_end,
         ss_var   = ss_var, 
-        dir_tif  = dir_grd)
+        dir_tif  = dir_grd,
+        verbose  = T)
       
       if (ss_var == "CLASS"){
         ts_csv = glue(
           "{dir_grds}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
         
         message("      sum_ss_grds_to_ts()")
-        tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv)
+        tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv, verbose = T)
       }
     }
   }
