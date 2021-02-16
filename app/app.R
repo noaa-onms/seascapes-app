@@ -23,7 +23,6 @@ shelf(
 
 # TODO:
 # - download grids (*.tif), time series (*.csv)
-# - seascapeR: update fxns to match colors b/n map and plot_ts
 
 sanctuaries           <- nms
 sanctuaries[["pmnm"]] <- NULL
@@ -38,10 +37,6 @@ ss_dataset <- "global_monthly" # TODO: + "global_8day"
 ss_var     <- "CLASS"          # TODO: + "P"
 
 ss_info <- get_ss_info(ss_dataset)
-# get_ss_dates(ss_info)
-
-# date_beg  = as.Date("2003-01-15")
-# date_end  = as.Date("2020-11-15")
 
 ts_csv <- dir_ls(dir_grd, regexp = fixed(glue("{ss_dataset}_{ss_var}.csv")), recurse = T)[1]
 ts <- read_csv(ts_csv, col_types = cols())
@@ -109,10 +104,7 @@ ui <- fluidPage(
       "Dark Mode", `for` = "dark_mode", class = "custom-control-label")),
   div(
     class = "float-right", 
-    # span(
-    #   style="font-size:20px;", 
     actionLink("lnkAbout", HTML("About&nbsp;&nbsp;"))),
-      #HTML("About&nbsp;&nbsp;"))),
   titlePanel(
     tagList(
       HTML("<h2>
@@ -124,14 +116,16 @@ ui <- fluidPage(
   fluidRow(
     column(
       12,
-      selectInput(
-        "selSanctuary",
-        "Sanctuary",
-        sanctuaries),
-      leafletOutput("map", width = "100%", height = 300),
+      div(
+        style = "padding-left: 43px;",
+        selectInput(
+          "selSanctuary",
+          "",
+          sanctuaries)),
+      leafletOutput("map", width = "100%", height = 350),
       sliderInput(
         "selDate", 
-        "Date",
+        "",
         min        = date_beg,
         max        = date_end,
         value      = date_beg, 
@@ -187,7 +181,6 @@ server <- function(input, output, session) {
     #   use proxy for varying date so doesn't zoom out
     sanctuary <- input$selSanctuary
     
-    # sanctuary = "nmsas"; date = as.Date("2019-01-15")
     ply <- get_url_ply(sanctuary, dir_ply = dir_ply)
     grd <- get_grd(sanctuary, date_beg)
     tbl <- get_tbl(sanctuary)

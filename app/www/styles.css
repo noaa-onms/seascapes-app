@@ -1,6 +1,19 @@
 /* increase play and pause button size */
 .glyphicon-play, .glyphicon-pause {
-    font-size: 35px;
+    font-size: 25px;
+}
+
+/* reduce selSanctuary size */
+.selectize-input {
+    padding-bottom: 0 !important;
+}
+
+.selectize-control {
+    margin-bottom: 0 !important;
+}
+
+.form-group {
+  margin-bottom: 0.2rem !important;
 }
 
 /* dygraph in dark mode */
