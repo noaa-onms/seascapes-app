@@ -33,9 +33,9 @@ msg_i <- function(name, itm, vec, show_time = T){
 for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
   msg_i("sanctuary", sanctuary, sanctuaries)
   
-  # ply <- get_url_ply(
-  #   sanctuary = sanctuary,
-  #   dir_ply   = dir_plys)
+  ply <- get_url_ply(
+    sanctuary = sanctuary,
+    dir_ply   = dir_plys)
   
   for (ss_dataset in ss_datasets){ # ss_dataset = ss_datasets[1]
     msg_i("  dataset", ss_dataset, ss_datasets)
@@ -45,24 +45,24 @@ for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
     dir_grd  = glue(
       "{dir_grds}/{sanctuary}/{ss_dataset}")
     
-    # for (ss_var in ss_vars){ # ss_var = ss_vars[1]
-    #   msg_i("    var", ss_var, ss_vars)
-    # 
-    #   message("      get_ss_grds()")
-    #   grds <- get_ss_grds(
-    #     ss_info, ply,
-    #     ss_var   = ss_var,
-    #     dir_tif  = dir_grd,
-    #     verbose  = T)
-    # 
-    #   if (ss_var == "CLASS"){
-    #     ts_csv = glue(
-    #       "{dir_grds}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
-    # 
-    #     message("      sum_ss_grds_to_ts()")
-    #     tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv, verbose = T)
-    #   }
-    # }
+    for (ss_var in ss_vars){ # ss_var = ss_vars[1]
+      msg_i("    var", ss_var, ss_vars)
+
+      message("      get_ss_grds()")
+      grds <- get_ss_grds(
+        ss_info, ply,
+        ss_var   = ss_var,
+        dir_tif  = dir_grd,
+        verbose  = T)
+
+      if (ss_var == "CLASS"){
+        ts_csv = glue(
+          "{dir_grds}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
+
+        message("      sum_ss_grds_to_ts()")
+        tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv, verbose = T)
+      }
+    }
     
     # TODO: breakup by ss_var
     zip_f <- glue("{dir_grd}.zip")
