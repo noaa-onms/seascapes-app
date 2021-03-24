@@ -1,0 +1,5 @@
+### {{cl}}
+
+```{r}
+tbl_ss_class({{cl}}, glue("{dir_www}/classes/svg"), "./classes/svg") 
+```

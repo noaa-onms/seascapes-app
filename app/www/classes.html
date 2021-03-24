@@ -1,0 +1,6383 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Classes</title>
+
+<script src="classes_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="classes_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="classes_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="classes_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="classes_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="classes_files/navigation-1.1/tabsets.js"></script>
+<link href="classes_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="classes_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="classes_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="classes_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="classes" class="section level2 tabset">
+<h2>Classes</h2>
+<div id="section" class="section level3">
+<h3>1</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+5.08
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.18
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.37
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.21
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.08
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.37
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl1_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 1
+</li>
+<li>
+NAME: NORTH ATLANTIC SPRING, ACC TRANSITION
+</li>
+<li>
+LATITUDE: SUBPOLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: SPRING-AUTUMN
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-1" class="section level3">
+<h3>2</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+12.23
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.43
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.12
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.51
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl2_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 2
+</li>
+<li>
+NAME: SUBPOLAR TRANSITION
+</li>
+<li>
+LATITUDE: TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-2" class="section level3">
+<h3>3</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+24.12
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+35.34
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.68
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.40
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl3_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 3
+</li>
+<li>
+NAME: TROPICAL SUBTROPICAL TRANSITION
+</li>
+<li>
+LATITUDE: TROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-3" class="section level3">
+<h3>4</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.40
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl4_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 4
+</li>
+<li>
+NAME: WESTERN WARM POOL SUBTROPICAL
+</li>
+<li>
+LATITUDE: SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: AUTUMN
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-4" class="section level3">
+<h3>5</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+23.95
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+35.89
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.71
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.50
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl5_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 5
+</li>
+<li>
+NAME: SUBTROPICAL GYRE TRANSITION
+</li>
+<li>
+LATITUDE: SUBTROPICAL TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: AUTUMN-WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-5" class="section level3">
+<h3>6</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+1.38
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-1.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.18
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.42
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl6_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 6
+</li>
+<li>
+NAME: ACC, NUTRIENT STRESS
+</li>
+<li>
+LATITUDE: SUBPOLAR POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-6" class="section level3">
+<h3>7</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+12.98
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.72
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.37
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.28
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.41
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl7_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 7
+</li>
+<li>
+NAME: TEMPERATE TRANSITION
+</li>
+<li>
+LATITUDE: TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-7" class="section level3">
+<h3>8</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+25.13
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.52
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.99
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.34
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl8_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 8
+</li>
+<li>
+NAME: INDOPACIFIC SUBTROPICAL GYRE
+</li>
+<li>
+LATITUDE: SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-8" class="section level3">
+<h3>9</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+28.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.84
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.86
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.37
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl9_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 9
+</li>
+<li>
+NAME: EQUATORIAL TRANSITION
+</li>
+<li>
+LATITUDE: TROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-9" class="section level3">
+<h3>10</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+23.85
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+35.64
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.87
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl10_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 10
+</li>
+<li>
+NAME: HIGHLY OLIGOTROPHIC SUBTROPICAL GYRE
+</li>
+<li>
+LATITUDE: SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-10" class="section level3">
+<h3>11</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+22.94
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.79
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.83
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.27
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.39
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl11_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 11
+</li>
+<li>
+NAME: TROPICAL/SUBTROPICAL UPWELLING
+</li>
+<li>
+LATITUDE: TROPICAL,SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-11" class="section level3">
+<h3>12</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+8.62
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+32.91
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.37
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.08
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl12_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 12
+</li>
+<li>
+NAME: SUBPOLAR
+</li>
+<li>
+LATITUDE: TEMPERATE/SUBPOLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-12" class="section level3">
+<h3>13</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+23.47
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+35.89
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.52
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl13_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 13
+</li>
+<li>
+NAME: SUBTROPICAL GYRE MESOSCALE INFLUENCED
+</li>
+<li>
+LATITUDE: SUBTROPICAL TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: SPRING-SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-13" class="section level3">
+<h3>14</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+9.95
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.91
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.84
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.16
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.19
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl14_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 14
+</li>
+<li>
+NAME: TEMPERATE BLOOMS UPWELLING
+</li>
+<li>
+LATITUDE: TEMPERATE/SUBPOLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: SPRING SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-14" class="section level3">
+<h3>15</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+25.35
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+35.40
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.51
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.32
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.20
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl15_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 15
+</li>
+<li>
+NAME: TROPICAL SEAS
+</li>
+<li>
+LATITUDE: TROPICAL/SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-15" class="section level3">
+<h3>16</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+18.74
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+37.87
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl16_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 16
+</li>
+<li>
+NAME: MEDITTERANEAN RED SEA
+</li>
+<li>
+LATITUDE: SUBTROPICAL/TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: WINTER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-16" class="section level3">
+<h3>17</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+20.89
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.59
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.64
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl17_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 17
+</li>
+<li>
+NAME: SUBTROPICAL TRANSITION LOW NUTRIENT STRESS
+</li>
+<li>
+LATITUDE: TROPICAL/SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-17" class="section level3">
+<h3>18</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+21.94
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+37.72
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl18_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 18
+</li>
+<li>
+NAME: MEDITTERANEAN RED SEA
+</li>
+<li>
+LATITUDE: TEMPERATE/SUBPOLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: SPRING-SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-18" class="section level3">
+<h3>19</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+7.63
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+31.55
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+1.19
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.09
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl19_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 19
+</li>
+<li>
+NAME: ARTIC/ SUBPOLAR SHELVES
+</li>
+<li>
+LATITUDE: TEMPERATE/SUBPOLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-19" class="section level3">
+<h3>20</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+27.45
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+31.82
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.88
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.34
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.18
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl20_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 20
+</li>
+<li>
+NAME: SUBTROPICAL, FRESH INFLUENCED COASTAL
+</li>
+<li>
+LATITUDE: SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: WINTER/YEAR-ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-20" class="section level3">
+<h3>21</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+22.54
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+34.46
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.57
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.12
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl21_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 21
+</li>
+<li>
+NAME: WARM, BLOOMS, HIGH NUTS
+</li>
+<li>
+LATITUDE: TROPICAL/SUBTROPICAL
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: WINTER/YEAR-ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-21" class="section level3">
+<h3>22</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+6.26
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+30.10
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.09
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.43
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.47
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl22_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 22
+</li>
+<li>
+NAME: ARCTIC LATE SUMMER
+</li>
+<li>
+LATITUDE: SUBPOLAR/POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-22" class="section level3">
+<h3>23</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+8.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+1.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+1.16
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl23_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 23
+</li>
+<li>
+NAME: FRESHWATER INFLUENCED POLAR/SUBPOLAR SHELVES
+</li>
+<li>
+LATITUDE: SUBPOLAR/POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-23" class="section level3">
+<h3>24</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+0.23
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.84
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-1.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+18.62
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.32
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl24_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 24
+</li>
+<li>
+NAME: ANTARCTIC SHELVES
+</li>
+<li>
+LATITUDE: SUBPOLAR/POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: SPRING SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-24" class="section level3">
+<h3>25</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+0.80
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+30.64
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.38
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+62.24
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.51
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.12
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl25_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 25
+</li>
+<li>
+NAME: ICE PACK/LARGE POLYNAS
+</li>
+<li>
+LATITUDE: SUBPOLAR/POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: SPRING SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-25" class="section level3">
+<h3>26</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+0.26
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.58
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-0.97
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+34.35
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.40
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.27
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl26_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 26
+</li>
+<li>
+NAME: ANTARCTIC ICE EDGE
+</li>
+<li>
+LATITUDE: POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-26" class="section level3">
+<h3>27</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+25.95
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.54
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+1.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.09
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl27_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 27
+</li>
+<li>
+NAME: HYPERSALINE EUTROPHIC, PERSIAN GULF, RED SEA
+</li>
+<li>
+LATITUDE: SUBTROPICAL/TEMPERATE
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: WINTER/YEAR-ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-27" class="section level3">
+<h3>28</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+2.33
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+27.76
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+35.84
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.64
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl28_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 28
+</li>
+<li>
+NAME: ARCTIC ICE EDGE
+</li>
+<li>
+LATITUDE: POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-28" class="section level3">
+<h3>29</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+33.89
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+9.13
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.27
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.09
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.32
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl29_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 29
+</li>
+<li>
+NAME: ANTARCTIC
+</li>
+<li>
+LATITUDE: POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: SOUTH
+</li>
+<li>
+DOMINANT SEASON: SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-29" class="section level3">
+<h3>30</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+2.32
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+29.87
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+15.52
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+0.81
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+0.06
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl30_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 30
+</li>
+<li>
+NAME: ICE EDGE BLOOM
+</li>
+<li>
+LATITUDE: SUBPOLAR/POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: NORTH
+</li>
+<li>
+DOMINANT SEASON: SPRING SUMMER
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-30" class="section level3">
+<h3>31</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+15
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl31_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 31
+</li>
+<li>
+NAME: 1-30% ICE PRESENT
+</li>
+<li>
+LATITUDE: SUBPOLAR POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-31" class="section level3">
+<h3>32</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl32_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 32
+</li>
+<li>
+NAME: 30-80% MARGINAL ICE
+</li>
+<li>
+LATITUDE: SUBPOLAR POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="section-32" class="section level3">
+<h3>33</h3>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:center;">
+Class Avg
+</th>
+<th style="text-align:center;">
+Relative to All Classes
+</th>
+<th style="text-align:center;">
+All Min
+</th>
+<th style="text-align:center;">
+All Max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+SST (°C)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_sst.svg">
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+28.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSS (psu)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_sss.svg">
+</td>
+<td style="text-align:center;">
+27.74
+</td>
+<td style="text-align:center;">
+38.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADT (m)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_adt.svg">
+</td>
+<td style="text-align:center;">
+-1.15
+</td>
+<td style="text-align:center;">
+1.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICE (%)
+</td>
+<td style="text-align:center;">
+90
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_ice.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+90.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CDOM (m<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_cdom.svg">
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CHLA (mg m<sup>-3</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_chla.svg">
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+2.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH (W m<sup>-2</sup> µm<sup>-1</sup> sr<sup>-1</sup>)
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_nflh.svg">
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NFLH:CHL
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+<img src="classes/svg/ss_cl33_nflh-chl.svg">
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.79
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+<ul>
+<li>
+CLASS: 33
+</li>
+<li>
+NAME: PACK ICE
+</li>
+<li>
+LATITUDE: SUBPOLAR POLAR
+</li>
+<li>
+DOMINANT HEMISPHERE: BOTH
+</li>
+<li>
+DOMINANT SEASON: YEAR ROUND
+</li>
+</ul>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

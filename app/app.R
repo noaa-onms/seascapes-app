@@ -8,6 +8,7 @@ shelf(
   glue,
   fs,
   here,
+  kableExtra,
   leaflet,
   lubridate,
   marinebon/seascapeR, 
@@ -136,6 +137,8 @@ ui <- fluidPage(
       "Dark Mode", `for` = "dark_mode", class = "custom-control-label")),
   div(
     class = "float-right", 
+    a(href = "classes.html", "Classes", target="_blank"),
+    HTML("&nbsp;&nbsp;"),
     actionLink("lnkAbout", HTML("About&nbsp;&nbsp;"))),
   titlePanel(
     tagList(

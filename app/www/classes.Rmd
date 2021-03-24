@@ -1,0 +1,30 @@
+---
+pagetitle: "Classes"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(
+  glue,
+  marinebon/seascapeR)
+
+dir_www  <- here::here("app/www")
+```
+
+## Classes {.tabset}
+
+```{r, results='asis'}
+src = lapply(ss_gl_classes$CLASS, function(cl) {
+  knitr::knit_expand('_class.Rmd')
+})
+res = knitr::knit_child(text = unlist(src), quiet = TRUE)
+cat(res, sep = '\n')
+```
