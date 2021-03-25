@@ -3,5 +3,5 @@
 #### {{cl}}: `r filter(ss_gl_classes, CLASS == {{cl}}) %>% pull(NAME)`
 
 ```{r}
-tbl_ss_class({{cl}}, glue("{dir_www}/classes/svg"), "./classes/svg") 
+tbl_ss_class({{cl}}, "{{dir_svg}}", "{{web_svg}}", n_bins = {{n_bins}})
 ```

@@ -16,17 +16,18 @@ shelf(
   dplyr,
   glue,
   marinebon/seascapeR)
+remotes::install_github("marinebon/seascapeR")
 ```
 
-The distribution of variables is plotted here as a curved density histogram. Alternatively, you can view them as [binned histograms](classes_hist10.html) (`n_bins=10`).
+The distribution of variables is plotted here as binned histograms (`n_bins=10`). Alternatively, you can view them as [curved density histograms](classes.html).
 
 ## Seascape Global Classes {.tabset}
 
 ```{r, results='asis'}
 n_bins  <- 10
 dir_www <- here::here("app/www")
-dir_svg <- glue("{dir_www}/classes_svg")
-web_svg <- "./classes_svg"
+dir_svg <- glue("{dir_www}/classes_hist10_svg")
+web_svg <- "./classes_hist10_svg"
 
 src <- lapply(ss_gl_classes$CLASS, function(cl) { # cl=1
   knitr::knit_expand('_class.Rmd')
