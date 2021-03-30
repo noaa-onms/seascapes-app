@@ -8,6 +8,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F)
 
+# remotes::install_github("marinebon/seascapeR")
 if (!require(librarian)){
   install.packages("librarian")
   library(librarian)
