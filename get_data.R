@@ -16,12 +16,14 @@ dir_data = here("data")
 dir_plys = glue("{dir_data}/ply")
 dir_grds = glue("{dir_data}/grd")
 
-sanctuaries = names(nms) %>% setdiff("pmnm")
+#sanctuaries = names(nms) %>% setdiff("pmnm")
+sanctuaries = c("fknms")
 # TODO: pmnm Error: 
 #   One or both longitude values (-180, 180) outside data range (-179.975, 179.975)
   
-ss_datasets = c("global_monthly") # TODO: "global_8day"
-ss_vars     = c("CLASS")          # TODO: "P"
+ss_datasets <- c("global_monthly") # TODO: "global_8day"
+ss_vars     <- c("CLASS")          # TODO: "P"
+ss_info     <- get_ss_info(dataset = ss_dataset)
 
 msg_i <- function(name, itm, vec, show_time = T){
   i_vec <- which(itm == vec)
@@ -39,8 +41,6 @@ for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
   
   for (ss_dataset in ss_datasets){ # ss_dataset = ss_datasets[1]
     msg_i("  dataset", ss_dataset, ss_datasets)
-    
-    # ss_info <- get_ss_info(dataset = ss_dataset)
     
     dir_grd  = glue(
       "{dir_grds}/{sanctuary}/{ss_dataset}")
