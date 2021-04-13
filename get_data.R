@@ -18,6 +18,8 @@ dir_grds = glue("{dir_data}/grd")
 
 #sanctuaries = names(nms) %>% setdiff("pmnm")
 sanctuaries = c("fknms")
+rerddap::cache_delete_all(force = T)
+
 # TODO: pmnm Error: 
 #   One or both longitude values (-180, 180) outside data range (-179.975, 179.975)
   
