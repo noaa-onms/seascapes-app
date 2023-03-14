@@ -39,6 +39,11 @@ ss_var     <- "CLASS"          # TODO: + "P"
 
 ss_info <- get_ss_info(ss_dataset)
 
+# read_csv("/share/github/seascape_app/data/grd/fknms/global_monthly_CLASS.csv") %>% 
+#   pull(date) %>% max()
+# 
+# read_csv("/share/github/seascape_app/data/grd/cbnms/global_monthly_CLASS.csv")
+
 ts_csv <- dir_ls(dir_grd, regexp = fixed(glue("{ss_dataset}_{ss_var}.csv")), recurse = T)[1]
 ts <- read_csv(ts_csv, col_types = cols())
 date_beg  = min(ts$date)
@@ -231,10 +236,18 @@ server <- function(input, output, session) {
     
     suppressWarnings({
       m <- leaflet() %>%
+        # add base: blue bathymetry and light brown/green topography
         addProviderTiles(
-          providers$Esri.OceanBasemap,
+          "Esri.OceanBasemap",
           options = providerTileOptions(
-            opacity = 0.6)) %>%
+            variant = "Ocean/World_Ocean_Base",
+            opacity = 0.6)) %>%        
+        # add reference: placename labels and borders
+        addProviderTiles(
+          "Esri.OceanBasemap",
+          options = providerTileOptions(
+            variant = "Ocean/World_Ocean_Reference",
+            opacity = 0.6)) %>%        
         addRasterImage(
           grd,
           project = T, method = "ngb",

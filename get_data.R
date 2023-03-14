@@ -16,16 +16,18 @@ dir_data = here("data")
 dir_plys = glue("{dir_data}/ply")
 dir_grds = glue("{dir_data}/grd")
 
-#sanctuaries = names(nms) %>% setdiff("pmnm")
-sanctuaries = c("fknms")
+# sanctuaries = names(nms) %>% setdiff("pmnm")
+# DEBUG
+sanctuaries = names(nms) %>% setdiff(c("pmnm","nmsas"))
 rerddap::cache_delete_all(force = T)
 
 # TODO: pmnm Error: 
 #   One or both longitude values (-180, 180) outside data range (-179.975, 179.975)
-  
+
 ss_datasets <- c("global_monthly") # TODO: "global_8day"
-ss_vars     <- c("CLASS")          # TODO: "P"
-ss_info     <- get_ss_info(dataset = ss_dataset)
+ss_vars    <- c("CLASS")           # TODO: "P"
+ss_info    <- get_ss_info(dataset = ss_datasets[1])
+redo_ts    <- TRUE
 
 msg_i <- function(name, itm, vec, show_time = T){
   i_vec <- which(itm == vec)
@@ -34,7 +36,8 @@ msg_i <- function(name, itm, vec, show_time = T){
     "{name}: {itm} [{i_vec} of {length(vec)}]{s_time}"))
 }
 
-for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
+for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]  # nmsas "American Samoa"
+
   msg_i("sanctuary", sanctuary, sanctuaries)
   
   ply <- get_url_ply(
@@ -60,14 +63,33 @@ for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]
       if (ss_var == "CLASS"){
         ts_csv = glue(
           "{dir_grds}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
+        
+        if (redo_ts){
+          ts <- path_ext_remove(ts_csv)
+          ts_csv_bkup      <- glue("{ts}_bkup.csv")
+          ts_attr_csv      <- glue("{ts}_attr.csv")
+          ts_attr_csv_bkup <- glue("{ts}_attr_bkup.csv")
+          if (file_exists(ts_csv)) 
+            file_move(
+              ts_csv, 
+              ts_csv_bkup)
+          if (file_exists(ts_attr_csv))
+            file_move(
+              ts_attr_csv, 
+              ts_attr_csv_bkup)
+        }
 
         message("      sum_ss_grds_to_ts()")
         tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv, verbose = T)
+        message("      end sum_ss_grds_to_ts()")
       }
+      message("   end: ss_var in ss_vars")
     }
+    message(" end: ss_dataset in ss_datasets")
     
     # TODO: breakup by ss_var
-    zip_f <- glue("{dir_grd}.zip")
-    zip(zip_f, dir_ls(dir_grd), flags = "-r9Xj")
+    # zip_f <- glue("{dir_grd}.zip")
+    # zip(zip_f, dir_ls(dir_grd), flags = "-r9Xj")
   }
+  message("end: sanctuary in sanctuaries")
 }
