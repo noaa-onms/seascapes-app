@@ -37,13 +37,6 @@ dir_grd  <- glue("{dir_data}/grd")
 ss_dataset <- "global_monthly" # TODO: + "global_8day"
 ss_var     <- "CLASS"          # TODO: + "P"
 
-ss_info <- get_ss_info(ss_dataset)
-
-# read_csv("/share/github/seascape_app/data/grd/fknms/global_monthly_CLASS.csv") %>% 
-#   pull(date) %>% max()
-# 
-# read_csv("/share/github/seascape_app/data/grd/cbnms/global_monthly_CLASS.csv")
-
 ts_csv <- dir_ls(dir_grd, regexp = fixed(glue("{ss_dataset}_{ss_var}.csv")), recurse = T)[1]
 ts <- read_csv(ts_csv, col_types = cols())
 date_beg  = min(ts$date)
