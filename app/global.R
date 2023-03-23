@@ -118,9 +118,8 @@ show_pal <- function(pal, vals){
 }
 # show_pal(pal_1, attr(pal_1, "classes"))
 
-devtools::load_all(here("../../marinebon/seascapeR"))
-# TODO: same alpha in plot as map
-#plot_ss_ts(tbl_1, col_1)
+# devtools::load_all(here("../../marinebon/seascapeR"))
+# plot_ss_ts(tbl_1, col_1)
 
 light <- bs_theme(
   version = 4,

@@ -8,8 +8,9 @@ shelf(
   glue,
   here,
   marinebon/seascapeR)
-# devtools::install_local(here("../../marinebon/seascapeR"), force=T)
-# devtools::load_all(here("../../marinebon/seascapeR"))
+# devtools::install_local(here::here("../../marinebon/seascapeR"), force=T)
+# devtools::load_all(here::here("../../marinebon/seascapeR"))
+# fs::file_touch(here::here("app/restart.txt"))
 
 # paths
 dir_data = here("data")
