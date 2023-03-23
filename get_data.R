@@ -8,9 +8,8 @@ shelf(
   glue,
   here,
   marinebon/seascapeR)
-# devtools::load_all("~/github/seascapeR")
-# devtools::install_local(here::here("../../marinebon/seascapeR"), force=T)
-# remotes::install_github("/share/github/marinebon/seascapeR")
+# devtools::install_local(here("../../marinebon/seascapeR"), force=T)
+# devtools::load_all(here("../../marinebon/seascapeR"))
 
 # paths
 dir_data = here("data")
@@ -26,9 +25,10 @@ rerddap::cache_delete_all(force = T)
 #   One or both longitude values (-180, 180) outside data range (-179.975, 179.975)
 
 ss_datasets <- c("global_monthly") # TODO: "global_8day"
-ss_vars    <- c("CLASS")           # TODO: "P"
-ss_info    <- get_ss_info(dataset = ss_datasets[1])
-redo_ts    <- TRUE
+ss_vars     <- c("CLASS")           # TODO: "P"
+ss_info     <- get_ss_info(dataset = ss_datasets[1])
+
+redo_ts    <- FALSE
 
 msg_i <- function(name, itm, vec, show_time = T){
   i_vec <- which(itm == vec)
@@ -37,7 +37,7 @@ msg_i <- function(name, itm, vec, show_time = T){
     "{name}: {itm} [{i_vec} of {length(vec)}]{s_time}"))
 }
 
-for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]  # nmsas "American Samoa"
+for (sanctuary in sanctuaries){ # sanctuary = "mbnms"  # nmsas "American Samoa"
 
   msg_i("sanctuary", sanctuary, sanctuaries)
   
