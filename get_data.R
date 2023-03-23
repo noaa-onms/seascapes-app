@@ -9,7 +9,8 @@ shelf(
   here,
   marinebon/seascapeR)
 # devtools::load_all("~/github/seascapeR")
-# remotes::install_github("marinebon/seascapeR")
+# devtools::install_local(here::here("../../marinebon/seascapeR"), force=T)
+# remotes::install_github("/share/github/marinebon/seascapeR")
 
 # paths
 dir_data = here("data")
@@ -18,7 +19,7 @@ dir_grds = glue("{dir_data}/grd")
 
 # sanctuaries = names(nms) %>% setdiff("pmnm")
 # DEBUG
-sanctuaries = names(nms) %>% setdiff(c("pmnm","nmsas"))
+sanctuaries = names(nms) %>% setdiff(c("pmnm"))
 rerddap::cache_delete_all(force = T)
 
 # TODO: pmnm Error: 
@@ -64,20 +65,8 @@ for (sanctuary in sanctuaries){ # sanctuary = sanctuaries[1]  # nmsas "American 
         ts_csv = glue(
           "{dir_grds}/{sanctuary}/{ss_dataset}_{ss_var}.csv")
         
-        if (redo_ts){
-          ts <- path_ext_remove(ts_csv)
-          ts_csv_bkup      <- glue("{ts}_bkup.csv")
-          ts_attr_csv      <- glue("{ts}_attr.csv")
-          ts_attr_csv_bkup <- glue("{ts}_attr_bkup.csv")
-          if (file_exists(ts_csv)) 
-            file_move(
-              ts_csv, 
-              ts_csv_bkup)
-          if (file_exists(ts_attr_csv))
-            file_move(
-              ts_attr_csv, 
-              ts_attr_csv_bkup)
-        }
+        if (redo_ts)
+          file_delete(ts_csv)
 
         message("      sum_ss_grds_to_ts()")
         tbl <- sum_ss_grds_to_ts(grds, ts_csv = ts_csv, verbose = T)
