@@ -18,7 +18,7 @@ shelf(
   stringr)
 # Note: joshuaulrich/xts needed over CRAN xts for plot_ts_ss() with dygraphs(retainDateWindow = T) to work
 
-# fs::file_touch(here("app/restart.txt"))
+# fs::file_touch(here::here("app/restart.txt"))
 # remotes::install_github("marinebon/seascapeR")
 # devtools::load_all("~/github/seascapeR")
 # devtools::install_local("~/github/seascapeR", force = T)

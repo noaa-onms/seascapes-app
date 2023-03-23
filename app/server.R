@@ -1,7 +1,7 @@
 function(input, output, session) {
 
   values <- reactiveValues(
-    date      = date_beg,
+    date      = date_end,
     tbl       = tbl_1,
     sanctuary = sanctuary_1,
     ply       = ply_1,
@@ -39,12 +39,12 @@ function(input, output, session) {
   
   # map ----
   output$map <- renderLeaflet({
-    # vary this map with sanctuary only, so using date_beg
+    # vary this map with sanctuary only, so using date_end
     #   use proxy for varying date so doesn't zoom out
     sanctuary <- input$selSanctuary
     
     ply <- get_url_ply(sanctuary, dir_ply = dir_ply)
-    grd <- get_grd(sanctuary, date_beg)
+    grd <- get_grd(sanctuary, date_end)
     tbl <- get_ts(sanctuary)
     pal <- get_pal(tbl)
     classes <- attr(pal, "classes")
@@ -86,7 +86,7 @@ function(input, output, session) {
         addControl(
           position = "bottomright",
           layerId  = "date",
-          html     = date_beg) %>% 
+          html     = date_end) %>% 
         addMiniMap(
           position = "bottomleft",
           width    = 100,
