@@ -39,13 +39,13 @@ plys = st_cast(ply,"POLYGON") |>
 
 plys |> 
   filter(nms == "mbnms-david") |> 
-  st_write(here("data/ply/mbnms-david.geojson"))
+  write_sf(here("data/ply/mbnms-david.geojson"))
   
 plys |> 
   filter(nms == "mbnms-main") |> 
-  st_write(here("data/ply/mbnms-main.geojson"))
+  write_sf(here("data/ply/mbnms-main.geojson"))
   
-mapView(plys, zcol="id")
+# mapView(plys, zcol="id")
 mapView(plys, zcol="nms")
 ```
 

@@ -17,6 +17,7 @@ shelf(
   shiny,
   stringr)
 # Note: joshuaulrich/xts needed over CRAN xts for plot_ts_ss() with dygraphs(retainDateWindow = T) to work
+source(here("functions.R"))
 
 # fs::file_touch(here::here("app/restart.txt"))
 # remotes::install_github("marinebon/seascapeR")
@@ -26,6 +27,10 @@ shelf(
 # TODO:
 # - download grids (*.tif), time series (*.csv)
 
+nms <- c(
+  nms, 
+  `mbnms-main`  = "Monterey Bay - Mainland",
+  `mbnms-david` = "Monterey Bay - Davidson Seamount")
 sanctuaries           <- nms
 sanctuaries[["pmnm"]] <- NULL
 sanctuaries           <- setNames(
@@ -107,7 +112,7 @@ get_grd <- function(sanctuary, date){
 }
 
 sanctuary_1 <- sanctuaries[[1]]
-ply_1       <- get_url_ply(sanctuary_1, dir_ply = dir_ply)
+ply_1       <- get_sanctuary_ply(sanctuary_1, dir_ply = dir_ply)
 tbl_1       <- get_ts(sanctuary_1)
 pal_1       <- get_pal(tbl_1)
 col_1       <- pal_1(attr(pal_1, "classes"))

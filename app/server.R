@@ -31,7 +31,7 @@ function(input, output, session) {
       
       values$sanctuary <- sanctuary
       values$tbl       <- tbl
-      values$ply       <- get_url_ply(sanctuary, dir_ply = dir_ply)
+      values$ply       <- get_sanctuary_ply(sanctuary, dir_ply = dir_ply)
       values$pal       <- get_pal(tbl)
       values$col       <- values$pal(attr(values$pal, "classes"))
       values$grd       <- get_grd(values$sanctuary, values$date)
@@ -43,7 +43,7 @@ function(input, output, session) {
     #   use proxy for varying date so doesn't zoom out
     sanctuary <- input$selSanctuary
     
-    ply <- get_url_ply(sanctuary, dir_ply = dir_ply)
+    ply <- get_sanctuary_ply(sanctuary, dir_ply = dir_ply)
     grd <- get_grd(sanctuary, date_end)
     tbl <- get_ts(sanctuary)
     pal <- get_pal(tbl)

@@ -1,3 +1,6 @@
+# This script is run by cron (`sudo crontab -e`) every day at 1am:
+#   cd /share/github/noaa-onms/seascapes-app; Rscript --vanilla get_data.R
+
 if (!require(librarian)){
   install.packages("librarian")
   library(librarian)
@@ -7,10 +10,13 @@ shelf(
   fs,
   glue,
   here,
-  marinebon/seascapeR)
+  marinebon/seascapeR,
+  quiet = T)
+# devtools::install_github("marinebon/seascapeR")
 # devtools::install_local(here::here("../../marinebon/seascapeR"), force=T)
 # devtools::load_all(here::here("../../marinebon/seascapeR"))
 # fs::file_touch(here::here("app/restart.txt"))
+source(here("functions.R"))
 
 # paths
 dir_data = here("data")
@@ -19,6 +25,11 @@ dir_grds = glue("{dir_data}/grd")
 
 # sanctuaries = names(nms) %>% setdiff("pmnm")
 # DEBUG
+
+nms <- c(nms, 
+  `mbnms-main`  = "Monterey Bay - Mainland",
+  `mbnms-david` = "Monterey Bay - Davidson Seamount")
+  
 sanctuaries = names(nms) %>% setdiff(c("pmnm"))
 rerddap::cache_delete_all(force = T)
 
@@ -38,14 +49,14 @@ msg_i <- function(name, itm, vec, show_time = T){
     "{name}: {itm} [{i_vec} of {length(vec)}]{s_time}"))
 }
 
-for (sanctuary in sanctuaries){ # sanctuary = "mbnms"  # nmsas "American Samoa"
+for (sanctuary in sanctuaries){ # sanctuary = "mbnms-david"  # nmsas "American Samoa"
 
   msg_i("sanctuary", sanctuary, sanctuaries)
   
-  ply <- get_url_ply(
+  ply <- get_sanctuary_ply(
     sanctuary = sanctuary,
     dir_ply   = dir_plys)
-  
+
   for (ss_dataset in ss_datasets){ # ss_dataset = ss_datasets[1]
     msg_i("  dataset", ss_dataset, ss_datasets)
     
@@ -56,10 +67,13 @@ for (sanctuary in sanctuaries){ # sanctuary = "mbnms"  # nmsas "American Samoa"
       msg_i("    var", ss_var, ss_vars)
 
       message("      get_ss_grds()")
+      
+      # devtools::load_all(here::here("../../marinebon/seascapeR"))
       grds <- get_ss_grds(
         ss_info, ply,
         ss_var   = ss_var,
         dir_tif  = dir_grd,
+        # date_end = "2004-01-01", # DEBUG
         verbose  = T)
 
       if (ss_var == "CLASS"){
