@@ -1,0 +1,52 @@
+---
+title: "mbnms_parts"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r}
+librarian::shelf(
+  dplyr, glue, here, mapview, 
+  marinebon/seascapeR, 
+  sf, tibble)
+
+# variables and paths
+sanctuary = "mbnms"
+dir_data = here("data")
+dir_plys = glue("{dir_data}/ply")
+dir_grds = glue("{dir_data}/grd")
+
+ply <- get_url_ply(
+  sanctuary = sanctuary,
+  dir_ply   = dir_plys)
+
+mapView(ply)
+
+plys = st_cast(ply,"POLYGON") |> 
+  st_as_sf() |> 
+  rowid_to_column("id") |> 
+  rename(
+    geom = x) |> 
+  mutate(
+    area_km2 = (st_area(geom) / (1000 * 1000)) |> as.numeric(),
+    id       = as.factor(id)) |> 
+  filter(area_km2 > 2) |> # drop Elkhorn Slough
+  arrange(area_km2) |> 
+  cbind(
+    nms = c("mbnms-david", "mbnms-main"))
+
+plys |> 
+  filter(nms == "mbnms-david") |> 
+  st_write(here("data/ply/mbnms-david.geojson"))
+  
+plys |> 
+  filter(nms == "mbnms-main") |> 
+  st_write(here("data/ply/mbnms-main.geojson"))
+  
+mapView(plys, zcol="id")
+mapView(plys, zcol="nms")
+```
+
+
