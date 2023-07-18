@@ -1,5 +1,5 @@
 # This script is run by cron (`sudo crontab -e`) every day at 1am:
-#   cd /share/github/noaa-onms/seascapes-app && Rscript --vanilla get_data.R  >> './get_data.log' 2>&1
+#   cd /share/github/noaa-onms/seascapes-app && Rscript --vanilla get_data.R && touch /share/github/noaa-onms/seascapes-app/app/restart.txt >> './get_data.log' 2>&1
 
 if (!require(librarian)){
   install.packages("librarian")
