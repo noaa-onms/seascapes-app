@@ -1,5 +1,5 @@
 # This script is run by cron (`sudo crontab -e`) every day at 1am:
-#   cd /share/github/noaa-onms/seascapes-app; Rscript --vanilla get_data.R
+#   cd /share/github/noaa-onms/seascapes-app && Rscript --vanilla get_data.R  >> './get_data.log' 2>&1
 
 if (!require(librarian)){
   install.packages("librarian")
@@ -11,6 +11,7 @@ shelf(
   glue,
   here,
   marinebon/seascapeR,
+  sf,
   quiet = T)
 # devtools::install_github("marinebon/seascapeR")
 # devtools::install_local(here::here("../../marinebon/seascapeR"), force=T)

@@ -15,6 +15,7 @@ shelf(
   raster,
   readr,
   shiny,
+  sf,
   stringr)
 # Note: joshuaulrich/xts needed over CRAN xts for plot_ts_ss() with dygraphs(retainDateWindow = T) to work
 source(here("functions.R"))

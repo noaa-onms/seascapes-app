@@ -1,3 +1,6 @@
+librarian::shelf(
+  glue, sf)
+
 get_sanctuary_ply <- function(
     sanctuary,
     dir_ply){
