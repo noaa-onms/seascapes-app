@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "mbnms-david",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "1", "area_km2": 2008.1727239479608, "nms": "mbnms-david" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -122.500000000125581, 35.900000003840091 ], [ -123.000000000150692, 35.900000003837242 ], [ -123.000000000147097, 35.500000003768037 ], [ -122.500000000122554, 35.500000003770879 ], [ -122.500000000125581, 35.900000003840091 ] ] ] } }
+]
+}
